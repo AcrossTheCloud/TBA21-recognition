@@ -25,7 +25,7 @@ provider:
   timeout: 900
   memorySize: 256
   apiKeys:
-    - ${env:API_KEY} # you can hide it in a serverless variable
+    - ${env:API_KEY_REKOGNITION} # you can hide it in a serverless variable
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -48,9 +48,17 @@ functions:
     handler: image_tagger.handler
     events:
       - http:
-          path: tag
+          path: labels
           method: get
           cors: true
           private: true
+
+resources:
+  Resources:
+    S3BucketPhotos:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: oceanarchive-rekognition-test
+        # add additional custom bucket configuration here
 
 
