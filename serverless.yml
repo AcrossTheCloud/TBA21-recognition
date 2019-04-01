@@ -24,6 +24,8 @@ provider:
   stage: ${env:STAGE, prod}
   timeout: 900
   memorySize: 256
+  apiKeys:
+    - ${env:API_KEY} # you can hide it in a serverless variable
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -42,9 +44,13 @@ plugins:
   - serverless-pseudo-parameters
 
 functions:
-  master:
-    handler: master.start
   image_tagger:
     handler: image_tagger.handler
+    events:
+      - http:
+          path: tag
+          method: get
+          cors: true
+          private: true
 
 
