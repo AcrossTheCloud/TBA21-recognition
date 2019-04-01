@@ -20,8 +20,8 @@ service: TBA21-recognition # NOTE: update this with your service name
 provider:
   name: aws
   runtime: nodejs8.10
-  region: ${env:REGION, eu-west-1}
-  stage: ${env:STAGE, prod}
+  region: ${env:REGION, 'eu-west-1'}
+  stage: ${env:STAGE, 'prod'}
   timeout: 900
   memorySize: 256
   apiKeys:
