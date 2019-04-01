@@ -31,8 +31,8 @@ provider:
       Action:
         - "s3:*"
       Resource:
-        - "arn:aws:s3:::tba21-recognition-test/*"
-        - "arn:aws:s3:::tba21-recognition-test"
+        - "arn:aws:s3:::tba21-rekognition-test/*"
+        - "arn:aws:s3:::tba21-rekognition-test"
     - Effect: Allow
       Action:
         - rekognition:DetectLabels
