@@ -1,0 +1,19 @@
+{
+  "name": "tba21-recognition",
+  "version": "0.0.1",
+  "description": "TBA21 recognition lambdas in Ireland",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AcrossTheCloud/TBA21-recognition.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/AcrossTheCloud/TBA21-recognition/issues"
+  },
+  "homepage": "https://github.com/AcrossTheCloud/TBA21-recognition#readme"
+}
