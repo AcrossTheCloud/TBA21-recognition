@@ -58,7 +58,7 @@ resources:
     S3BucketPhotos:
       Type: AWS::S3::Bucket
       Properties:
-        BucketName: tba21-recognition-test
+        BucketName: tba21-rekognition-test
         # add additional custom bucket configuration here
 
 
