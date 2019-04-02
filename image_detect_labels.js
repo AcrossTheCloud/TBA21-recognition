@@ -41,7 +41,7 @@ exports.handler = async (event,context,callback) => {
     const response = {
       statusCode: 200,
       headers: headers,
-      body: JSON.stringify({ "message": "Server error " + error.toString() })
+      body: JSON.stringify({ "message": "Server error " + err.toString() })
     };
     callback(null, response);  
   }
