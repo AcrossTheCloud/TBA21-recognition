@@ -39,7 +39,7 @@ exports.handler = async (event,context,callback) => {
   } catch (err) {
     console.log(err);
     const response = {
-      statusCode: 503,
+      statusCode: 200,
       headers: headers,
       body: JSON.stringify({ "message": "Server error " + error.toString() })
     };
