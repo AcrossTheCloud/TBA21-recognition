@@ -44,8 +44,8 @@ plugins:
   - serverless-pseudo-parameters
 
 functions:
-  image_tagger:
-    handler: image_tagger.handler
+  image_detect_labels:
+    handler: image_detect_labels.handler
     events:
       - http:
           path: labels
