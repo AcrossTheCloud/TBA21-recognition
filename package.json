@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/AcrossTheCloud/TBA21-recognition#readme",
   "devDependencies": {
-    "serverless-dotenv-plugin": "^2.0.1",
+    "serverless-dotenv-plugin": "^2.1.1",
     "serverless-pseudo-parameters": "^2.4.0"
   },
   "dependencies": {
-    "aws-sdk": "^2.432.0"
+    "aws-sdk": "^2.473.0"
   }
 }
