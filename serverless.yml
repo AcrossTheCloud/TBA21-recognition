@@ -22,7 +22,7 @@ provider:
   runtime: nodejs8.10
   region: ${env:REGION, 'eu-west-1'}
   stage: ${env:STAGE, 'prod'}
-  timeout: 900
+  timeout: 30 # limited to 30 by API GW
   memorySize: 256
   apiKeys:
     - ${env:API_KEY_REKOGNITION} # you can hide it in a serverless variable
@@ -31,8 +31,8 @@ provider:
       Action:
         - "s3:*"
       Resource:
-        - "arn:aws:s3:::tba21-rekognition-test/*"
-        - "arn:aws:s3:::tba21-rekognition-test"
+        - "arn:aws:s3:::tba21-rekognition/*"
+        - "arn:aws:s3:::tba21-rekognition"
     - Effect: Allow
       Action:
         - rekognition:DetectLabels
@@ -58,7 +58,7 @@ resources:
     S3BucketPhotos:
       Type: AWS::S3::Bucket
       Properties:
-        BucketName: tba21-rekognition-test
+        BucketName: tba21-rekognition
         # add additional custom bucket configuration here
 
 
